@@ -10,10 +10,12 @@ int main()
     a = a1;
      if (a1 == a2 || a1 == 0 || a2 == 0){
         cout << "Las rectas no se intersecan ya que son paralelas, o alguna de las 2 no existe" << endl;
-    }
-    else{
+    }else{
     cout << "Ingrese 2 ordenadas al origen " << endl;
     cin >> b1 >> b2;
+        if(a1 == a2 && b1 == b2 ){
+        cout << "El punto de intersección es toda la recta" << endl;
+    }
     if(b1>=0){
         b2 = b2 -b1;
     }
@@ -32,8 +34,12 @@ int main()
         a1 = a1 *-1;
         b2 = b2*-1;
     }
+    if(a1 =! 0){
     Xf = b2/a1;
     Yf = (a*Xf)+b1;
+    }else{
+    Yf = b2;
+    }
     cout << "El punto de interseccion es " <<"("<<Xf<<","<<Yf<<")" <<endl;
     }
 
